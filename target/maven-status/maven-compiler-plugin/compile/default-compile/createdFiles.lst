@@ -1,0 +1,10 @@
+module-info.class
+com\mycompany\financialapp\extraIncome.class
+com\mycompany\financialapp\theController.class
+com\mycompany\financialapp\Financial.class
+com\mycompany\financialapp\FinancialExpenses.class
+com\mycompany\financialapp\Expenses.class
+com\mycompany\financialapp\FinancialIncome.class
+com\mycompany\financialapp\SystemInfo.class
+com\mycompany\financialapp\View.class
+com\mycompany\financialapp\App.class
