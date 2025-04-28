@@ -1,5 +1,9 @@
-module com.mycompany.financialapp {
+module com.adam.financialapp {
     requires javafx.controls;
-    exports com.mycompany.financialapp;
+    requires javafx.fxml;
     requires com.google.gson;
+
+
+    opens com.adam.financialapp to javafx.fxml;
+    exports com.adam.financialapp;
 }
