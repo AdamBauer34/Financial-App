@@ -1,6 +1,5 @@
 package com.adam.financialapp;
 
-import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -14,21 +13,37 @@ import java.io.Writer;
  */
 public class Financial {
 
-    private Gson gson;
     private FinancialIncome FinIn;
     private FinancialExpenses FinEx;
+    private FinancialProfile FinProf;
+    private SQLtables sqltables;
 
-    public void Financial() {
+    public Financial() {
         start();
-
+        this.sqltables = new SQLtables();
     }
 
     public void start() {
         System.out.println("Start");
-        load();
+        //saveProfile("name");
+        System.out.println("end");
     }
 
-    public void load() {
+    public void startTables(){
+        sqltables.setTables();
+    }
+
+    public void addIncome(String name, Double value, Boolean repeating) {
+        int repeat = 0;
+        int type = 0;
+        if (repeating == true){
+            repeat = 1;
+        }
+        sqltables.addObject(name, type);
+        sqltables.addIncome(value, name, type, repeat);
+    }
+
+    /*public void load() {
         String incomePath = "Income.json";
         String expensePath = "Expense.json";
         File incomeFile = new File(incomePath);
@@ -53,7 +68,7 @@ public class Financial {
                 System.out.println("Expense Load Failed");
             }
         } else {
-            FinIn = new FinancialIncome();
+            FinEx = new FinancialExpenses();
         }
 
     }
@@ -75,4 +90,21 @@ public class Financial {
         }
 
     }
+    public Boolean getFinProf(){
+        if(FinProf==null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public void saveProfile(String name){
+        FinProf = new FinancialProfile(name);
+        try (Writer writer = new FileWriter("Profile.json")) {
+            gson.toJson(FinProf, writer);
+        } catch (IOException e) {
+            System.out.println("Income Save Failed");
+            throw new RuntimeException(e);
+        }
+    }*/
 }

@@ -1,0 +1,57 @@
+.root {
+    prompt-colour: #a04000;
+    heading-colour: #000000;
+}
+
+.main-menu-Temp {
+    -fx-background-color: #4682B4;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-style: hidden none solid none;
+}
+.main-menu {
+    -fx-background-color: #4eba60;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-style: hidden solid hidden none;
+}
+.main-menu-buttons {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-style: hidden none hidden none;
+}
+.general-buttons {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-style: solid solid solid solid;
+}
+.money-buttons {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-style: solid solid solid solid;
+}
+.general-button-text {
+    -fx-text-fill: black;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+.text-field {
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-min-width: 25;
+    -fx-max-width: 150;
+}
+.general-text {
+    -fx-text-fill: black;
+    -fx-font-size: 32px;
+}
